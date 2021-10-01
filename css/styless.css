@@ -7,6 +7,13 @@ body {
     width: 200px;
     height: 200px;
     border: 1px solid black;
+    /* background-color: blue; */
+}
+
+.snake {
+    background-color: purple;
+    background-image: url('https://image.shutterstock.com/image-vector/cute-funny-snake-vector-cartoon-260nw-736378120.jpg');
+    display: block;
 }
 
 /* .grid div {
@@ -14,6 +21,3 @@ body {
     height: 300px;
 } */
 
-.snake {
-    background-color: purple;
-}
