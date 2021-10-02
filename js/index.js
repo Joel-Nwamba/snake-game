@@ -22,7 +22,7 @@ function createGrid() {
 createGrid();
 
 currentSnake.forEach(index => squares[index].classList.add('snake'));
-
+let timerId = setInterval(move, 1000);
 function move() {
 
 if(
