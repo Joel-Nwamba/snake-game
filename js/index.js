@@ -35,18 +35,18 @@ if(
 return clearInterval(timerId);
 
     const tail = currentSnake.pop();
-    console.log(tail);
-    console.log(currentSnake);
 
     squares[tail].classList.remove('snake');
 
     currentSnake.unshift(currentSnake[0] + direction)
-    console.log(currentSnake)
+
     squares[currentSnake[0]].classList.add('snake');
 }
 
 move();
+let timerFunction = timerId;
 // let timerId = setInterval(move, 1000);
+// return clearInterval(timerId);
 function generateApple() {
     do {
         appleIndex = Math.floor(Math.random() * squares.length )
@@ -57,18 +57,15 @@ generateApple()
 
 
 
+
 function control(e) {
     if (e.keyCode === 39) {
-        console.log('right pressed')
         direction = 1
     } else if (e.keyCode === 38) {
-        console.log('up pressed')
         direction = -width;
     } else if(e.keyCode === 37) {
-        console.log('left pressed')
         direction = -1
     } else {
-        console.log('down pressed')
         direction = +width;
     }
 }
