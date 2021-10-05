@@ -23,14 +23,15 @@ createGrid();
 
 currentSnake.forEach(index => squares[index].classList.add('snake'));
 let timerId = setInterval(move, 1000);
+
 function move() {
 
 if(
- (currentSnake[0] +width >= 100 && direction === 100) ||
- (currentSnake[0] % width === 9 && direction === 1) ||
+ (currentSnake[0] +width >= width*width && direction === width) ||
+ (currentSnake[0] % width === width -1 && direction === 1) ||
  (currentSnake[0] % width === 0 && direction === -1) ||
- (currentSnake[0] - width < 0 && direction === -10) ||
- squares[currentSnake[0]].classList.contains('snake')
+ (currentSnake[0] - width < 0 && direction === -width) ||
+ squares[currentSnake[0] + direction].classList.contains('snake')
 )
 return clearInterval(timerId);
 
@@ -40,11 +41,15 @@ return clearInterval(timerId);
 
     currentSnake.unshift(currentSnake[0] + direction)
 
+    if(squares[currentSnake[0]].classList.contains('apple')) {
+        squares[currentSnake[0]].classList.remove('apple')
+    }
+
     squares[currentSnake[0]].classList.add('snake');
 }
 
 move();
-let timerFunction = timerId;
+// let timerFunction = timerId;
 // let timerId = setInterval(move, 1000);
 // return clearInterval(timerId);
 function generateApple() {
@@ -69,3 +74,5 @@ function control(e) {
         direction = +width;
     }
 }
+
+document.addEventListener('keydown', control);

@@ -13,19 +13,19 @@ body {
 }
 
 .square {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 .snake {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background-color: purple;
 }
 
 .apple {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background-color: blue;
 }
 
