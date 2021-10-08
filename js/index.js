@@ -29,6 +29,16 @@ currentSnake.forEach(index => squares[index].classList.add('snake'));
 
 
 function startGame() {
+    currentSnake.forEach(index => squares[index].classList.remove('snake'));
+    squares[appleIndex].classList.remove('apple')
+    clearInterval(timerId)
+    currentSnake = [2,1,0]
+    score = 0
+    scoreDisplay.textContent = score;
+    direction = 1
+    intervalTime = 1000
+    generateApple()
+    currentSnake.forEach(index => squares[index].classList.add('snake'))
      timerId = setInterval(move, intervalTime);
 
 }
