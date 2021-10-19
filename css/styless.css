@@ -1,8 +1,14 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #ceff33;
+    background-color: #80914a;
     text-align: center;
+}
+
+h1 {
+    color: #252525;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .grid {
@@ -14,6 +20,7 @@ body {
     height: 200px;
     border: 4px solid black;
     background-color: rgba(216, 219, 34, 0.959);
+    background-blend-mode: screen;
     /* background-color: blue; */
 }
 
@@ -51,8 +58,9 @@ body {
 
 main {
     background-image: url(../img/snake-image.jpg);
+    background-repeat: 200px 200px;
     background-position: center;
-    padding: 30px 40px;
+    padding: 200px 200px;
 }
 
 /* .grid div {
